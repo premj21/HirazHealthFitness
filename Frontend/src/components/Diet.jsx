@@ -21,7 +21,7 @@ const Diet = () => {
     e.preventDefault(); 
     try {
        divElement.innerHTML = "PROCESSING YOUR DIET PLZ WAIT ....";
-       const response = await fetch("/", {
+       const response = await fetch("https://hirazfitnesshub.onrender.com", {
          method: "POST",
          headers: {
            "Content-Type": "application/json",
@@ -29,7 +29,7 @@ const Diet = () => {
          body: JSON.stringify({
            profession: prof,
            weight: wegt,
-           height:hegt
+           height: hegt,
          }),
        });
     const data = await response.json();
