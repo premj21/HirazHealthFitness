@@ -21,7 +21,7 @@ const Diet = () => {
     e.preventDefault(); 
     try {
        divElement.innerHTML = "PROCESSING YOUR DIET PLZ WAIT ....";
-       const response = await fetch("http://localhost:1000/", {
+       const response = await fetch("/", {
          method: "POST",
          headers: {
            "Content-Type": "application/json",

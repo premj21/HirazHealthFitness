@@ -3,7 +3,7 @@ const cors = require('cors');
 
 const {OpenAIApi,Configuration }= require('openai');
 const configuration = new Configuration({
-  apiKey: "",
+  apiKey: process.env.link,
 });
 const openai = new OpenAIApi(configuration);
 
@@ -27,4 +27,5 @@ const {profession,weight,height} = req.body;
     res.status(500).send(error || 'New Error');
   }
 })
-app.listen(1000, () => console.log('AI server started '));
+const prt = process.env.port || 5000;
+app.listen(prt, () => console.log('AI server started '));
