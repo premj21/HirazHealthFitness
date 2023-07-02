@@ -11,6 +11,8 @@
 
 # production
 # build
+Backend/node_modules
+Backend/package-lock.json
 
 # misc
 .DS_Store
