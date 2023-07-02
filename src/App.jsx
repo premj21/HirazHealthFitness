@@ -14,7 +14,6 @@ import Diet from "./components/Diet";
 function App() {
     const containerRef = useRef(null);
 
-  
 
   return (
     <>
@@ -33,15 +32,14 @@ function App() {
         containerRef={containerRef}
       >
         <main data-scroll-container ref={containerRef}>
-          
+
           <Routes>
-            <Route exact path="/Login" element={<Login />} />
+            <Route path="/login" element={<Login/>} />
             <Route
               exact
               path="/"
               element={
                 <>
-                
                   <Navbar />
                   <Home />
                   <About />
