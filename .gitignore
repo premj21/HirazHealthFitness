@@ -6,13 +6,13 @@ Frontend/node_modules
 .pnp.js
 Frontend/package-lock.json
 
-# testing
+testing
 /coverage
-# production
-# build
+production
+build
 /Backend/node_modules
 package-lock.json
-# misc
+misc
 .DS_Store
 .env.local
 .env.development.local
