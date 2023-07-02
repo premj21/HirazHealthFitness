@@ -1,0 +1,103 @@
+.sectn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #f1f4f9, #dff1ff);
+}
+.sectn .clr {
+    position: absolute;
+    filter: blur(150px);
+}
+.sectn .clr:nth-child(1) {
+    width: 100%;
+    height: 100%;
+    background: #00d0ff92;
+}
+
+.container-login {
+    position: relative;
+    width: 400px;
+    min-height: 400px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(1px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.form {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+
+}
+
+.form>h2 {
+    position: relative;
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+}
+
+.form>h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 80px;
+    height: 4px;
+    background: white;
+}
+
+.inputBox {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.inputBox>input {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 35px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 16px;
+    letter-spacing: 1px;
+    /* color: rgb(198, 196, 196); */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.inputBox>input::placeholder {
+    color: white;
+}
+.inputBox>input[type="submit"] {
+    background: white;
+    color: #666;
+    max-width: 400px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.forget {
+    margin-top: 5px;
+    color: white;
+}
+
+.forget>a {
+    color: white;
+    font-weight: 600;
+}
+
