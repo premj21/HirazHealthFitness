@@ -14,7 +14,6 @@ import Diet from "./components/Diet";
 function App() {
     const containerRef = useRef(null);
 
-
   return (
     <>
       <LocomotiveScrollProvider
@@ -32,7 +31,6 @@ function App() {
         containerRef={containerRef}
       >
         <main data-scroll-container ref={containerRef}>
-
           <Routes>
             <Route path="/login" element={<Login/>} />
             <Route
