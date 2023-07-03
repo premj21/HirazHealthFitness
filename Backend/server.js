@@ -27,7 +27,6 @@ const {profession,weight,height} = req.body;
       message: response.data.choices[0].text
     });
   } catch (error) {
-    
     res.status(500).send(error || 'New Error');
   }
 })
