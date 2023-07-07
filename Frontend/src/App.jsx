@@ -4,14 +4,28 @@ import Footer from "./components/Footer";
 import About from "./components/About";
 import Home from "./components/Home"
 import Navbar from "./components/Navbar"
-import {  useRef, } from "react";
+import {  useRef,useState,useEffect } from "react";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import Login from "./components/Login";
 import Workouts from './components/Workouts';
 import Vide from "./components/Vide";
 import Diet from "./components/Diet";
+import {Text} from '@chakra-ui/react';
 // import {motion} from 'framer-motion';
 function App() {
+     const [pt,setPt] = useState(true);
+  const handleResize = () => {
+  if(window.innerWidth<=1400 )
+  {setPt(false);}
+  else {setPt(true);}
+  };
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
     const containerRef = useRef(null);
 
   return (
@@ -31,6 +45,9 @@ function App() {
         containerRef={containerRef}
       >
         <main data-scroll-container ref={containerRef}>
+            {
+     pt===false?<><Text textAlign='center' fontsize='50rem' fontWeight='900' >Change Your Display Size </Text> </>:
+          <>
           <Routes>
             <Route path="/login" element={<Login/>} />
             <Route
@@ -49,6 +66,7 @@ function App() {
               }
             />
           </Routes>
+    </>}
         </main>
       </LocomotiveScrollProvider>
     </>
